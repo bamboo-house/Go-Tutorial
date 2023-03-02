@@ -7,7 +7,8 @@ package main
 // )
 
 func main() {
-	SampleFunc()
+	// SampleFunc()
+	SampleInterFace()
 	// SampleType()
 	// 標準入力で整数を受け取り、その値を出力する
 		// var price int
