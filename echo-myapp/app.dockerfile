@@ -2,7 +2,9 @@ FROM golang:1.19
 
 WORKDIR /app
 
-COPY go.mod go.sum ./
+COPY . .
 RUN go mod download && go mod verify
 
-CMD ["go", "run", "main.go"]
+RUN go install github.com/cosmtrek/air@latest
+
+CMD ["air", "-c", ".air.toml"]
